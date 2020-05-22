@@ -2,6 +2,8 @@
 #
 # Check the prime.log every hour and send an email with any new results
 
+# Get results by checking a diff rather than wc - removes conflict of multiple results
+
 if test -f "prime.log" ; then
     old_result_count=$(grep -c "prime" prime.log)
     sleep_time=1h
@@ -9,7 +11,10 @@ if test -f "prime.log" ; then
     while true; do
         current_result_count=$(grep -c "prime" prime.log)
         if [[ $current_result_count > $old_result_count ]] ; then
-            new_result=$(grep "prime" prime.log | tail -1)
+            # check difference to return multiple results if multiple
+            # worker units finished within the same hour
+            difference=$("$current_result_count" - "$old_result_count")
+            new_result=$(grep "prime" prime.log | tail -"$difference")
             # send mail
             {
                 echo From: your_email@domain.com
