@@ -15,7 +15,9 @@ Place the GIMPS_LL_notify.sh file in the prime folder, the script will look
 in this location for the prime.log file. Then open a terminal in this directory
 and run the following: 
 
-'bash GIMPS_LL_notify.sh & exit'
+```
+bash GIMPS_LL_notify.sh & exit
+```
 
 This will run as a background process without needing a dedicated termainal
 window.
