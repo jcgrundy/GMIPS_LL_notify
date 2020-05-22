@@ -2,8 +2,6 @@
 #
 # Check the prime.log every hour and send an email with any new results
 
-# Get results by checking a diff rather than wc - removes conflict of multiple results
-
 if test -f "prime.log" ; then
     old_result_count=$(grep -c "prime" prime.log)
     sleep_time=1h
