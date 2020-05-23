@@ -6,7 +6,7 @@ in the prime.log file.
 ## Usage
 
 You will need to set up your own smtp settings in order to send mail via the
-terminal. I have used ssmtp on ubuntu but the specifics for your config will
+terminal. I have used `ssmtp` on ubuntu but the specifics for your config will
 depend on your host, a helpful starting point can be found 
 [here](https://wiki.archlinux.org/index.php/SSMTP). You can then update the 
 script to contain your desired To: and From: email adresses
