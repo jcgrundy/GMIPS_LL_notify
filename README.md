@@ -22,7 +22,7 @@ bash GIMPS_LL_notify.sh & exit
 This will run as a background process without needing a dedicated termainal
 window.
 
-You can turn it off by running the following, where `<pid>` is the process id shown in the grep result:
+If you want to turn it off run the following, where `<pid>` is the process id shown in the grep result:
   
 ```
 ps -aux | grep GIMPS_LL_notify.sh
