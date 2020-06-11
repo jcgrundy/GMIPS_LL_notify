@@ -1,4 +1,4 @@
-# GIMPS LL notify
+# GIMPS notify
 
 A bash script that will update you via email when there are new LL test results
 in the prime.log file. 
