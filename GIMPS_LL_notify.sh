@@ -11,8 +11,8 @@ if test -f "prime.log" ; then
         if [[ $current_result_count > $old_result_count ]] ; then
             # check difference to return multiple results if multiple
             # worker units finished within the same hour
-            difference=$((current_result_count - old_result_count))
-            new_result=$(grep "prime" prime.log | tail -"$difference")
+            difference=$(("$current_result_count" - "$old_result_count"))
+            new_result=$(grep "prime" prime.log | tail -n "$difference")
             # send mail
             {
                 echo From: your_email@domain.com
